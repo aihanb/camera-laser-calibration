@@ -3,7 +3,7 @@
 * All rights reserved.
 *
 * File:	Marker.h
-* Brief: ±êÇ©Àà,ÊµÏÖmarkerÍ¼ºÍ¶ÔÓ¦IDÖ®¼äµÄ×ª»»
+* Brief: æ ‡ç­¾ç±»,å®ç°markerå›¾å’Œå¯¹åº”IDä¹‹é—´çš„è½¬æ¢
 * Version: 1.0
 * Author: Yang Xian
 * Email: yang_xian521@163.com
@@ -15,6 +15,9 @@
 #include <opencv2/imgproc/imgproc.hpp>
 // #include <opencv2/highgui/highgui.hpp>
 #include "Marker.h"
+
+#include <vector>
+using namespace std;
 
 using namespace cv;
 
@@ -30,10 +33,10 @@ private:
 	static int hammDistMarker(const Mat& _code);
 	static int code2ID(const Mat& _code);
 private:
-	static const int m_idVerify[4][3];	// marker Éè¼ÆµÄid
+	static const int m_idVerify[4][3];	// marker è®¾è®¡çš„id
 public:
-	int m_id;	// marker ½âÂëµÄid
-	vector<Point2f> m_points;	// markerµÄcontourĞÅÏ¢
+	int m_id;	// marker è§£ç çš„id
+	vector<Point2f> m_points;	// markerçš„contourä¿¡æ¯
 	Matx33f m_rotation;
 	Vec3f m_translation;
 };
